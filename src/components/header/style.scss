@@ -1,0 +1,72 @@
+@import '../../styles/config/variables';
+
+.Header {
+    background-color: $c-first-450;
+    width: 235px;
+
+    .header-sidebar-logo { 
+        display: none;
+        width: 100%;
+
+        a:hover {
+            background: $c-first-450;
+            color: $c-secondary;
+        }
+
+        .show-navbar {
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+    
+            svg {
+                color: $c-gray-100;
+            }
+        }
+    }
+
+    
+
+}
+
+@media (max-width: 1120px) {
+    
+    .Header {
+        padding: 1rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+
+        .header-sidebar-logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    #aside {
+        position: fixed;
+        width: 100%;
+        top: 76px;
+        right: 0;
+        z-index: 1000;
+        height: 0;
+        visibility: hidden;
+        overflow-y: hidden;
+        padding: 0;
+        transition: 0.3s linear;
+    }
+
+    #aside.active {
+        height: calc(100vh - 76px);
+        opacity: 1;
+        visibility: visible;
+        overflow-y: auto;
+        overflow: hidden;
+    }
+}
+

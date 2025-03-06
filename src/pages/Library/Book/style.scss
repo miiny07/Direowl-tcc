@@ -1,0 +1,134 @@
+@import '../../../styles/config/variables';
+
+.book {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+
+}
+
+.book-action {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+
+    .button-delete {
+        color: $c-gray-100;
+        padding: 10px;
+        gap: 0.5rem;
+        transition: 0.3s ease-in;
+        background-color: $c-red-200;
+        width: 200px;
+        text-align: center;
+
+        &:hover {
+            background: $c-red-300;
+        }
+
+    }
+}
+
+.book-container {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    .book-image {
+        width: 200px;
+        height: fit-content;
+        -webkit-box-shadow: -17px 14px 33px 5px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: -17px 14px 33px 5px rgba(0, 0, 0, 0.38);
+        box-shadow: -17px 14px 33px 5px rgba(0, 0, 0, 0.38);
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.book-info {
+    flex: 1 1 50px;
+
+    b {
+        background: -webkit-linear-gradient(97deg, rgba(255, 237, 118, 1) 0%, rgba(247, 177, 118, 1) 100%);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        text-align: justify;
+        margin-top: 1rem;
+    }
+
+    .timer {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        margin-top: 0.4rem;
+
+        svg {
+            color: $c-first-100;
+        }
+    }
+
+    svg {
+        color: $c-gray-500;
+        font-size: 1.5rem;
+
+    }
+}
+
+.book-btn {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    max-width: 400px;
+}
+
+.button-fav {
+    padding: 0.5rem;
+    background-color: $c-first-450;
+    color: $c-gray-200;
+    width: 100%;
+    transition: 0.3s ease-in;
+
+    &:hover {
+        background: transparent;
+    }
+}
+
+.button-read {
+    background: rgb(255, 237, 118);
+    background: linear-gradient(139deg, rgba(255, 237, 118, 1) 0%, rgba(247, 177, 118, 1) 100%);
+    width: 100%;
+    margin-top: 2rem;
+    color: $c-first-450;
+    transition: 1.5s;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    &:not(:disabled):hover {
+        background: $c-first-450;
+        color: $c-gray-100;
+    }
+
+}
+
+
+@media (max-width: 630px) {
+    .book-container {
+        flex-direction: column-reverse;
+    }
+
+}

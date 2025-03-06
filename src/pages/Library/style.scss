@@ -1,0 +1,50 @@
+@import '../../styles/config/variables';
+
+.library-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    form {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        
+        input[type="text"] {
+            padding-left: 50px;
+            width: 100%;
+        }
+
+        button[type="submit"] {
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            
+            svg {
+                position: absolute;
+                top: 13%;
+                left: 1%;
+                color: $c-first-300;
+                transition: 0.4s ease-in-out;   
+
+                &:hover {
+                    color: $c-first-400;
+                }
+            }
+        }
+    }
+
+    
+}
+
+.gif-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.gif-container img {
+    display: block;
+}
